@@ -1,0 +1,51 @@
+diff a/Assets/Scripts/MakePipe.cs b/Assets/Scripts/MakePipe.cs	(rejected hunks)
+@@ -1,19 +1,49 @@
+ using System.Collections;
+ using System.Collections.Generic;
++<<<<<<< HEAD
++<<<<<<< HEAD
++=======
+ using System.Threading;
++>>>>>>> feat/back
++=======
++using System.Threading;
++>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
+ using UnityEngine;
+ 
+ public class MakePipe : MonoBehaviour
+ {
++<<<<<<< HEAD
+     public GameObject Pipe;
+     public float timeDiff;
+ 
+     float timer = 0;
++=======
++    public GameObject pipe;            //������ ������Ʈ
++
++    [SerializeField] float timeDiff;   //������Ʈ�� ������ �ð�
++
++    [SerializeField] float spawnX;
++
++    [SerializeField] float spawnMaxY;
++    [SerializeField] float spawnMinY;
++
++    private float timer = 0;
++
++
++    private void Awake()
++    {
++        pipe = GetComponent<GameObject>();
++    }
++>>>>>>> feat/back
+ 
+     void Update()
+     {
+         timer += Time.deltaTime;
++<<<<<<< HEAD
++<<<<<<< HEAD
++=======
+ 
++>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
+         if (timer > timeDiff)
+         {
+             GameObject newpipe = Instantiate(Pipe); //�������� ��� �����ϴ� ��
