@@ -4,5 +4,47 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Scenes: []
+=======
+<<<<<<< HEAD
+  m_Scenes: []
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_Scenes: []
+=======
+<<<<<<< HEAD
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+<<<<<<< HEAD
+    path: Assets/Scenes/Feat_Back.unity
+    guid: 7174077aa25001c479c205c66a1aea26
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: 05834cfb240fdcd458ab3955b612b016
+  - enabled: 1
+    path: Assets/Scenes/Obstacle.unity
+    guid: ecdfaac069e2e71488734235730a7234
+=======
+<<<<<<< HEAD
+  m_Scenes: []
+>>>>>>> feat/back
+=======
+    path: Assets/Scenes/MainMenu.unity
+    guid: 624e999928ad71747b5a88d9da446c29
+  - enabled: 1
+    path: Assets/Scenes/feat-player.unity
+    guid: 5f0b95ff8ba338244a867c7179f57974
+>>>>>>> 2076d6f4a6df70fdd5609e0f93f3f20e785d22e7
+>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
+>>>>>>> e56ace55adccf7d27e0bb3bd69a473abeca7bd89
+=======
+  m_Scenes: []
+>>>>>>> dev
+>>>>>>> 05f71bb1b976845513226c81975f7c32fd7f6b57
+>>>>>>> e5dcb9687649313af4066d7d6929431c385a00a8
   m_configObjects: {}

@@ -54,4 +54,22 @@ public class Audio : MonoBehaviour
 
         bgmPlayer.Play();
     }
+    public void PlaySfx(sfx sfx)
+    {
+        for(int i = 0; i < sfxPlayers.Length; i++)
+        {
+            int loopIndex = (i + channelIndex) % sfxPlayers.Length;
+
+            if (sfxPlayers[loopIndex].isPlaying)
+            {
+                continue;
+            }
+            int ranI = 0;
+
+            channelIndex = loopIndex;
+            sfxPlayers[loopIndex].clip = sfxClips[(int)sfx + ranI];
+            sfxPlayers[loopIndex].Play();
+            break;
+        }
+    }
 }
