@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("이동")]
+    [Header("점프 높이")]
     [SerializeField] private float jumpForce;  //점프 높이
-
-    [SerializeField] private float startTime = 2.0f;  //움직이기 시작 대기 시간
 
     private Rigidbody2D rb;
 
@@ -21,11 +19,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartMoving());
+      
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
             canJump = true;
         }
@@ -37,17 +35,18 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
-            //rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.velocity = new Vector2(rb.velocity.x, 0);
 
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
         canJump = false;
     }
 
-    IEnumerator StartMoving()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        yield return new WaitForSeconds(startTime);
-
-        rb.bodyType = RigidbodyType2D.Dynamic;
+        if (collision.gameObject.tag == "Ground")
+        {
+            transform.gameObject.SetActive(false);
+        }
     }
 }
