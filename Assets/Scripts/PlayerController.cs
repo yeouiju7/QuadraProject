@@ -1,18 +1,23 @@
 
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("이동/점프")]
-    [SerializeField] private float moveSpeed;  //움직이는 속도
-    [SerializeField] private float JumpForce;  //점프 높이
+<<<<<<< HEAD
+    [Header("이동")]
+    [SerializeField] private float jumpForce;  //점프 높이
 
     [SerializeField] private float startTime = 2.0f;  //움직이기 시작 대기 시간
+=======
+    [Header("점프 높이")]
+    [SerializeField] private float jumpForce;  //점프 높이
+>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
 
     private Rigidbody2D rb;
 
-    private bool canMove;
+    private bool canJump;
 
     private void Awake()
     {
@@ -21,22 +26,48 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(StartMoving());
+      
     }
     void Update()
     {
-        if (canMove)
+<<<<<<< HEAD
+        if (Input.GetKeyDown(KeyCode.Space))
+=======
+        if (Input.GetMouseButton(0))
+>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
         {
-            rb.velocity = Vector2.right * moveSpeed;
-            rb.bodyType = RigidbodyType2D.Dynamic;
+            canJump = true;
         }
         
+
+
+    }
+    private void FixedUpdate()
+    {
+        if (canJump)
+        {
+<<<<<<< HEAD
+            //rb.velocity = new Vector2(rb.velocity.x, 0);
+=======
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
+
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        canJump = false;
     }
 
-    IEnumerator StartMoving()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+<<<<<<< HEAD
         yield return new WaitForSeconds(startTime);
 
-        canMove = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+=======
+        if (collision.gameObject.tag == "Ground")
+        {
+            transform.gameObject.SetActive(false);
+        }
+>>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
     }
 }
