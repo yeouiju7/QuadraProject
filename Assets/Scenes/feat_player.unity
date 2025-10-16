@@ -227,9 +227,6 @@ GameObject:
   - component: {fileID: 1993659503}
   - component: {fileID: 1993659506}
   - component: {fileID: 1993659505}
-
-
-
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -376,9 +373,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.6}
   m_EdgeRadius: 0
-
-
-
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
