@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class MakePipe : MonoBehaviour
@@ -12,6 +13,7 @@ public class MakePipe : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
         if (timer > timeDiff)
         {
             GameObject newpipe = Instantiate(Pipe); //파이프를 계속 생성하는 식
