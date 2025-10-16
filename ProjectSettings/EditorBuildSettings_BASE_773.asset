@@ -4,14 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  m_Scenes: []
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
   m_Scenes: []
 =======
@@ -43,10 +35,4 @@ EditorBuildSettings:
 >>>>>>> 2076d6f4a6df70fdd5609e0f93f3f20e785d22e7
 >>>>>>> 0a082b285d2ed24480ecf48344792ef79b6403ad
 >>>>>>> e56ace55adccf7d27e0bb3bd69a473abeca7bd89
-=======
-  m_Scenes: []
->>>>>>> dev
->>>>>>> 05f71bb1b976845513226c81975f7c32fd7f6b57
->>>>>>> e5dcb9687649313af4066d7d6929431c385a00a8
->>>>>>> fcede4cea65f317ffad0d7de771d14eeaf72ddea
   m_configObjects: {}
