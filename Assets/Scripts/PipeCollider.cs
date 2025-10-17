@@ -3,24 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Obstacle : MonoBehaviour
-{
-
-    public float speed;
-   
-    
-    void Update()
-    {
-        transform.position += Vector3.left * speed * Time.deltaTime;
-    }
-
+public class PipeCollider : MonoBehaviour
+{    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("player"))
         {
+            
             SceneManager.LoadScene("GameOverScene");
         }
 
     }
-
 }
