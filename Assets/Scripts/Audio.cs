@@ -25,7 +25,7 @@ public class Audio : MonoBehaviour
     }
 
     private void Awake()
-    {
+    {        
         playeSound();
     }
 
@@ -53,6 +53,23 @@ public class Audio : MonoBehaviour
         }
 
         bgmPlayer.Play();
+    }
+    public void OnOff(bool isplay)
+    {
+        if(isplay)
+        {
+            if(!bgmPlayer.isPlaying)
+            {
+                bgmPlayer.Play();
+            }
+        }
+        else
+        {
+            if(bgmPlayer.isPlaying)
+            {
+                bgmPlayer.Stop();
+            }
+        }
     }
     public void PlaySfx(sfx sfx)
     {

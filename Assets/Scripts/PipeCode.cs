@@ -15,8 +15,6 @@ public class PipeCode : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-
-
         if (timer > timeDiff)
         {
             GameObject newpipe = Instantiate(Pipe); //파이프를 계속 생성하는 식
@@ -25,10 +23,5 @@ public class PipeCode : MonoBehaviour
             timer = 0;
             Destroy(newpipe, 10.0f); //10초 뒤 파이프 사라짐(이미 지나간 파이프 제거)
         }
-
-
-
-
-
     }
 }

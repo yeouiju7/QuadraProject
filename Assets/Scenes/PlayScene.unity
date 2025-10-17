@@ -409,8 +409,8 @@ MonoBehaviour:
   sfxClips:
   - {fileID: 8300000, guid: d1c394acb34eee644b9a0cc9e9f56aab, type: 3}
   - {fileID: 8300000, guid: c8a3fe17a6641ec48b38fb455a40a223, type: 3}
-  sfxVolume: 0
-  channels: 0
+  sfxVolume: 0.3
+  channels: 16
 --- !u!4 &275529458
 Transform:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3266925093316851085, guid: 5c4e33eda6df2d6489395e6a15c33431, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.39
+      value: 10.03
       objectReference: {fileID: 0}
     - target: {fileID: 3266925093316851085, guid: 5c4e33eda6df2d6489395e6a15c33431, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1008,6 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 4
+  audio: {fileID: 275529457}
 --- !u!95 &1885321974
 Animator:
   serializedVersion: 5

@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private bool canJump;
     private bool isStarted = false;
 
+    public Audio audio;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +34,8 @@ public class PlayerController : MonoBehaviour
         // 점프 입력 (Space 또는 마우스 클릭 둘 다 허용)
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            canJump = true;
+            audio.PlaySfx(Audio.sfx.JumpSound);
+            canJump = true;            
         }
     }
 
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
+            
             rb.velocity = new Vector2(rb.velocity.x, 0); // 점프 전 속도 초기화
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             canJump = false;
@@ -49,7 +53,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-        {
+        {  
             // 바닥에 닿으면 비활성화 (예: 게임오버 처리)
             SceneManager.LoadScene("GameOverScene");
         }
@@ -58,8 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             Score.bestScore = Score.score;
         }
-        
-
     }
 
 }
