@@ -7,6 +7,6 @@ public class StartButton : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene("feat-player");
+        SceneManager.LoadScene("PlayScene");
     }
 }

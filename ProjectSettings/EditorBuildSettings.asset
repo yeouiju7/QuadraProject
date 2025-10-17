@@ -5,20 +5,20 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/QuadraProject.unity
+  - enabled: 0
+    path: Assets/Scenes/QuadraProject.unity
     guid: e61de6200df04d14d905d8aafd141c8c
   - enabled: 1
-    path: Assets/Scenes/Obstacle.unity
+    path: Assets/Scenes/Scenes XXX/Obstacle.unity
     guid: ecdfaac069e2e71488734235730a7234
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/PlayScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/feat-player.unity
+    path: Assets/Scenes/Scenes XXX/feat-player.unity
     guid: 5f0b95ff8ba338244a867c7179f57974
   - enabled: 1
-    path: Assets/Scenes/Feat_Back.unity
+    path: Assets/Scenes/Scenes XXX/Feat_Back.unity
     guid: 7174077aa25001c479c205c66a1aea26
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity

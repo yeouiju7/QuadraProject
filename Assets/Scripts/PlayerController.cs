@@ -1,12 +1,12 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("이동 / 점프 설정")]
     [SerializeField] private float jumpForce = 5f;  // 점프 높이
-    [SerializeField] private float startTime = 2.0f;  // 시작 대기 시간
 
     private Rigidbody2D rb;
     private bool canJump;
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(startTime);
+        yield return null;
         rb.bodyType = RigidbodyType2D.Dynamic;
         isStarted = true;
     }
@@ -51,7 +51,15 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             // 바닥에 닿으면 비활성화 (예: 게임오버 처리)
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("GameOverScene");
         }
+
+        if (Score.score > Score.bestScore)
+        {
+            Score.bestScore = Score.score;
+        }
+        
+
     }
+
 }
